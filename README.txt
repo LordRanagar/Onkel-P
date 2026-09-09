@@ -1,4 +1,4 @@
-ONKEL P 2.7.3
+ONKEL P 2.7.4
 
 Mobilversionen er nu tilpasset den godkendte Onkel P-struktur.
 
@@ -17,3 +17,7 @@ Favicon, SEO metadata, canonical URLs and social sharing metadata added.
 
 2.7.3:
 Forsiden har fået en lille personlig tekstsektion, uden ændringer af den godkendte grundstruktur eller navigation.
+
+
+2.7.4:
+Dungeons of Darkmore-siden har fået en kort, visuel sektion om projektets tre centrale mål: udforskning, party-spil og den klassiske dungeon crawler-stemning.

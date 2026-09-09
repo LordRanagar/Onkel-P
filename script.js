@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
         link.classList.add("selected");
         const n = link.dataset.beer;
         beerTitle.textContent = `Øl nr. ${n}`;
+        const selectedLabel = document.querySelector("#selected-beer-label");
+        if (selectedLabel) selectedLabel.textContent = `Øl nr. ${n}`;
         history.replaceState(null, "", `#ol-${n}`);
       });
     });

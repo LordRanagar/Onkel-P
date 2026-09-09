@@ -184,3 +184,13 @@ p{max-width:78ch;margin-top:0;margin-bottom:14px}
   color:var(--muted);
   margin-bottom:0;
 }
+
+/* Onkel P 2.7.6 - Nordbryg selection label */
+.beer-selection-label{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:.92rem;
+}
+.beer-selection-label strong{
+  color:var(--cream);
+}

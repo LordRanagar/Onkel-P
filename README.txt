@@ -1,4 +1,4 @@
-ONKEL P 2.7.5
+ONKEL P 2.7.6
 
 Mobilversionen er nu tilpasset den godkendte Onkel P-struktur.
 
@@ -25,3 +25,7 @@ Dungeons of Darkmore-siden har fået en kort, visuel sektion om projektets tre c
 
 2.7.5:
 TailWag-siden har fået en kort sektion om, hvad projektet skal gøre nemmere: overblik, hundehverdag og flere hunde/personer.
+
+
+2.7.6:
+Nordbryg viser nu tydeligt, hvilken øl der er valgt, mens den eksisterende øl-vælger bevares. Ingen nye øldata er opfundet eller tilføjet.

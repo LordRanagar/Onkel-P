@@ -9,3 +9,7 @@ På mindre skærme:
 - Ingen ny hamburger-menu er indført.
 
 Øvrigt indhold og godkendt design fra 2.6 er bevaret.
+
+
+Version: 2.7.2
+Favicon, SEO metadata, canonical URLs and social sharing metadata added.

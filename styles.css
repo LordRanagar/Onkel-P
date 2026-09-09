@@ -167,3 +167,20 @@ p{max-width:78ch;margin-top:0;margin-bottom:14px}
 .quiet { opacity: .78; font-style: italic; }
 .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 @media (max-width: 900px) { .two-column { grid-template-columns: 1fr; } }
+
+/* Onkel P 2.7.3 - small personal homepage note */
+.home-note{
+  margin-top:24px;
+  border-top:1px solid var(--line-soft);
+  padding-top:18px;
+}
+.home-note-inner{
+  max-width:900px;
+}
+.home-note h2{
+  margin:0 0 8px;
+}
+.home-note p{
+  color:var(--muted);
+  margin-bottom:0;
+}

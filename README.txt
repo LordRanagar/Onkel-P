@@ -1,4 +1,4 @@
-ONKEL P 2.7
+ONKEL P 2.7.3
 
 Mobilversionen er nu tilpasset den godkendte Onkel P-struktur.
 
@@ -13,3 +13,7 @@ På mindre skærme:
 
 Version: 2.7.2
 Favicon, SEO metadata, canonical URLs and social sharing metadata added.
+
+
+2.7.3:
+Forsiden har fået en lille personlig tekstsektion, uden ændringer af den godkendte grundstruktur eller navigation.

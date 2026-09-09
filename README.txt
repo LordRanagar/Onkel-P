@@ -1,4 +1,4 @@
-ONKEL P 2.7.4
+ONKEL P 2.7.5
 
 Mobilversionen er nu tilpasset den godkendte Onkel P-struktur.
 
@@ -21,3 +21,7 @@ Forsiden har fået en lille personlig tekstsektion, uden ændringer af den godke
 
 2.7.4:
 Dungeons of Darkmore-siden har fået en kort, visuel sektion om projektets tre centrale mål: udforskning, party-spil og den klassiske dungeon crawler-stemning.
+
+
+2.7.5:
+TailWag-siden har fået en kort sektion om, hvad projektet skal gøre nemmere: overblik, hundehverdag og flere hunde/personer.

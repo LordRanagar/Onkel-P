@@ -1,0 +1,169 @@
+
+:root{
+  --bg:#0d0c0b;
+  --panel:#151311;
+  --panel2:#1c1713;
+  --line:#8c6838;
+  --line-soft:#4e3c25;
+  --brass:#c99a52;
+  --cream:#eee6d7;
+  --muted:#b5aa99;
+  --active:#2b2118;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:radial-gradient(circle at 70% 20%, #211a13 0, var(--bg) 42%, #080807 100%);
+  color:var(--cream);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.55;
+}
+a{color:inherit;text-decoration:none}
+.site-banner{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+  z-index:1000;
+  background:#090908;
+  display:block;
+  overflow:hidden;
+  box-shadow:0 10px 22px rgba(0,0,0,.45);
+}
+.site-banner img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.layout{display:grid;grid-template-columns:minmax(190px,16vw) 1fr;min-height:calc(100vh - 120px)}
+.sidebar{
+  border-right:1px solid var(--line-soft);
+  background:linear-gradient(90deg,#0b0b0a,#11100f);
+  padding:16px 10px;
+}
+.nav{position:sticky;top:16px}
+.nav a{
+  display:flex;align-items:center;gap:13px;
+  padding:11px 14px;margin:1px 0;
+  color:var(--cream);font-size:.98rem;
+  transition:background .18s ease, padding-left .18s ease, color .18s ease;
+}
+.nav a:hover{background:#18140f;padding-left:21px}
+.nav a.active{
+  background:linear-gradient(90deg,#332518,#1a1510);
+  box-shadow:inset 3px 0 0 var(--brass);
+}
+.marker-slot{
+  width:38px;flex:0 0 38px;height:32px;position:relative;
+}
+.nav-marker{
+  position:absolute;
+  left:0;
+  top:0;
+  width:38px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  color:#d4a760;
+  font-size:27px;
+  line-height:1;
+  pointer-events:none;
+  z-index:5;
+  transition:transform .32s cubic-bezier(.2,.8,.2,1);
+}
+.content{max-width:1400px;width:100%;padding:24px 42px 44px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:24px;align-items:start}
+h1{font-size:clamp(2rem,2.55vw,3.25rem);line-height:1.02;margin:0 0 8px;color:#f3ede2}
+h2{font-size:1.65rem;margin:22px 0 9px;color:#ead9bc}
+h2::before{content:"";display:inline-block;width:18px;border-top:2px solid var(--brass);margin:0 10px 7px 0}
+h3{font-size:1.3rem;color:#e6c88f}
+.lead{font-size:1.28rem;color:#c8bda9;margin:0 0 17px}
+p{max-width:78ch;margin-top:0;margin-bottom:14px}
+.panel{
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,rgba(30,24,18,.82),rgba(10,10,9,.86));
+  padding:19px;
+  box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+.photo{width:100%;display:block;border:1px solid var(--line);max-height:410px;object-fit:cover}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.card{border:1px solid var(--line-soft);padding:20px;background:#11100e}
+.card strong{display:block;color:#e4c38b;margin-bottom:7px}
+.list{margin:0;padding:0;list-style:none;border:1px solid var(--line)}
+.list li{border-bottom:1px solid var(--line-soft)}
+.list li:last-child{border-bottom:0}
+.list a{display:flex;justify-content:space-between;gap:20px;padding:14px 18px}
+.list a:hover,.list a.selected{background:linear-gradient(90deg,#2b2118,#17120e)}
+.beer-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
+.label-placeholder{
+  min-height:260px;border:1px solid #776448;
+  display:grid;place-items:center;text-align:center;
+  background:radial-gradient(circle,#25211d,#11100e 70%);
+  color:#b9ad9a;padding:25px;
+}
+.status{margin-top:22px}
+.status-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:9px 0;border-bottom:1px solid var(--line-soft)}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:#777;margin-right:8px}
+.dot.done{background:#62b77a}.dot.progress{background:#d7a83f}
+.quote{font-size:1.45rem;color:#d6c2a2;text-align:center;padding:22px;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);margin:28px 0}
+.footer{border-top:1px solid var(--line-soft);padding:22px 38px;display:flex;justify-content:space-between;align-items:center;color:#9e9487;background:#11100f}
+.footer-links{display:flex;align-items:center;gap:14px}
+.footer-links a{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;color:#9e9487;text-decoration:none;border:1px solid transparent;font-size:.9rem}
+.footer-links a:hover{color:#e4c38b;border-color:var(--line-soft);background:rgba(184,137,61,.08)}
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{border-right:0;border-bottom:1px solid var(--line-soft);padding:8px 10px;background:linear-gradient(180deg,#11100f,#0b0b0a)}
+  .nav{position:relative;display:block}
+  .nav a{white-space:normal;padding:10px 14px;margin:1px 0}
+  .nav a:hover{padding-left:21px}
+  .marker-slot{width:34px;flex-basis:34px;height:30px}
+  .nav-marker{width:34px;height:30px;font-size:23px}
+  
+  .content{padding:30px 22px 55px}
+  .hero-grid,.beer-layout{grid-template-columns:1fr}
+  .info-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .nav a{font-size:.9rem;gap:7px}
+  .nav-marker{font-size:21px}
+  .content{padding:24px 16px 45px}
+  .footer{padding:18px 16px;display:flex;gap:12px}.footer-links{margin-left:auto}
+}
+
+.site-banner-spacer{
+  width:100%;
+  aspect-ratio:2048 / 300;
+}
+
+/* Nordbryg */
+.intro-panel{border:1px solid var(--line-soft);background:rgba(18,15,12,.72);padding:20px 22px;margin:4px 0 26px;}
+.intro-panel p:last-child{margin-bottom:0}
+.beer-section{display:grid;grid-template-columns:minmax(220px,.58fr) minmax(0,1.42fr);gap:24px;align-items:start}
+.beer-list-column h2{margin-top:0}
+.muted-intro{color:var(--muted);font-size:.96rem;margin-bottom:14px}
+.beer-detail{min-height:390px}
+.beer-detail h2{margin-top:0}
+.beer-facts p{margin-bottom:9px}
+.beer-facts hr{border:0;border-top:1px solid var(--line-soft);margin:16px 0}
+.recipe-card{margin-top:20px;border:1px solid var(--line-soft);background:#11100e;padding:17px 19px;display:flex;gap:14px;align-items:baseline}
+.recipe-card strong{color:#e4c38b;white-space:nowrap}
+.recipe-card span{color:var(--muted)}
+.future-note{margin-top:26px;border-top:1px solid var(--line-soft);padding-top:6px}
+.future-note h2{margin-bottom:8px}
+.future-note p{color:var(--muted)}
+@media(max-width:900px){.beer-section{grid-template-columns:1fr}.beer-detail{min-height:0}}
+@media(max-width:520px){.recipe-card{display:block}.recipe-card strong{display:block;margin-bottom:7px}}
+
+/* TailWag 2.3 */
+.status-list { margin: 0; }
+.status-list div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px solid rgba(184,137,61,.22); }
+.status-list div:last-child { border-bottom: 0; }
+.status-list dt { font-weight: 700; }
+.status-list dd { margin: 0; }
+.feature-list { margin: 0; padding-left: 1.25rem; }
+.feature-list li { margin: .55rem 0; }
+.quiet { opacity: .78; font-style: italic; }
+.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 900px) { .two-column { grid-template-columns: 1fr; } }

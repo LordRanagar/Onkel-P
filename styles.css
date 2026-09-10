@@ -158,7 +158,7 @@ p{max-width:78ch;margin-top:0;margin-bottom:14px}
 
 /* TailWag 2.3 */
 .status-list { margin: 0; }
-.status-list div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px solid rgba(184,137,61,.22); }
+.status-list div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 16px; padding: 7px 0; border-bottom: 1px solid rgba(184,137,61,.22); }
 .status-list div:last-child { border-bottom: 0; }
 .status-list dt { font-weight: 700; }
 .status-list dd { margin: 0; }

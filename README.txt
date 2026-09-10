@@ -1,4 +1,4 @@
-ONKEL P 2.7.6
+ONKEL P 2.7.7
 
 Mobilversionen er nu tilpasset den godkendte Onkel P-struktur.
 
@@ -29,3 +29,7 @@ TailWag-siden har fået en kort sektion om, hvad projektet skal gøre nemmere: o
 
 2.7.6:
 Nordbryg viser nu tydeligt, hvilken øl der er valgt, mens den eksisterende øl-vælger bevares. Ingen nye øldata er opfundet eller tilføjet.
+
+
+2.7.7:
+Om Onkel P er gjort mere personlig og visuel. Pede og Bobby står først i profilsiden, den godkendte personlige introduktion er fremhævet, og Mine ting viser tre direkte links til Darkmore, TailWag og Nordbryg. Eksisterende godkendt tekst er bevaret.

@@ -194,3 +194,47 @@ p{max-width:78ch;margin-top:0;margin-bottom:14px}
 .beer-selection-label strong{
   color:var(--cream);
 }
+
+/* Onkel P 2.7.7 - Om Onkel P */
+.personal-lead{
+  border:1px solid var(--line-soft);
+  background:rgba(18,15,12,.72);
+  padding:13px 17px;
+  display:inline-block;
+  margin-bottom:20px;
+}
+.about-photo-column .photo{
+  max-height:520px;
+}
+.photo-caption{
+  color:var(--muted);
+  font-size:.9rem;
+  margin:7px 0 18px;
+  text-align:center;
+}
+.about-text-column .quote{
+  margin-bottom:0;
+}
+.my-things-grid{
+  margin-top:18px;
+}
+.card-link{
+  display:block;
+  color:var(--muted);
+  text-decoration:none;
+  transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease;
+}
+.card-link:hover{
+  color:var(--cream);
+  background:#211a14;
+  border-color:var(--line);
+  transform:translateY(-1px);
+}
+.card-link strong{
+  display:block;
+  color:var(--cream);
+  margin-bottom:7px;
+}
+@media(max-width:900px){
+  .about-photo-column{order:-1}
+}

@@ -182,3 +182,15 @@ p{max-width:78ch;margin-top:0;margin-bottom:14px}
 .recipe-link-card a:hover{text-decoration:underline;color:#e4c38b}
 @media(max-width:900px){.beer-showcase{grid-template-columns:1fr}.beer-label-wrap{height:360px}.beer-label-wrap img{max-height:330px}}
 @media(max-width:520px){.beer-label-wrap{height:330px}.beer-label-wrap img{max-height:300px}}
+
+
+/* Nordbryg beer selector: only one beer detail is shown at a time. */
+.beer-detail-area {
+  min-width: 0;
+}
+.beer-detail[hidden] {
+  display: none !important;
+}
+.beer-tab {
+  cursor: pointer;
+}

@@ -53,3 +53,41 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => moveMarker(active, false), { passive: true });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = [...document.querySelectorAll(".beer-tab[data-beer]")];
+  const panels = [...document.querySelectorAll(".beer-detail[data-beer-panel]")];
+  if (!tabs.length || !panels.length) return;
+
+  function showBeer(name, updateHash = true) {
+    tabs.forEach(tab => {
+      const selected = tab.dataset.beer === name;
+      tab.classList.toggle("selected", selected);
+      tab.setAttribute("aria-selected", selected ? "true" : "false");
+    });
+
+    panels.forEach(panel => {
+      const active = panel.dataset.beerPanel === name;
+      panel.hidden = !active;
+      panel.classList.toggle("active", active);
+    });
+
+    if (updateHash && history.replaceState) {
+      history.replaceState(null, "", "#" + name);
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", event => {
+      event.preventDefault();
+      showBeer(tab.dataset.beer);
+    });
+  });
+
+  const initial = location.hash.slice(1);
+  showBeer(
+    panels.some(panel => panel.dataset.beerPanel === initial) ? initial : "mjoelner",
+    false
+  );
+});

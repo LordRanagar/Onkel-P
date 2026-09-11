@@ -68,4 +68,47 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Nordbryg label lightbox.
+  const label = document.querySelector(".beer-label");
+  if (label) {
+    const lightbox = document.createElement("div");
+    lightbox.className = "beer-lightbox";
+    lightbox.setAttribute("aria-hidden", "true");
+    lightbox.innerHTML = `
+      <button class="beer-lightbox-close" type="button" aria-label="Luk stor etiketvisning">×</button>
+      <img src="${label.getAttribute("src")}" alt="${label.getAttribute("alt")}">
+      <div class="beer-lightbox-hint">Klik udenfor etiketten for at lukke</div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const close = () => {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      label.focus();
+    };
+
+    const open = () => {
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    label.addEventListener("click", open);
+    label.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open();
+      }
+    });
+    close.addEventListener("click", close);
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && lightbox.classList.contains("is-open")) close();
+    });
+  }
+
 });

@@ -82,32 +82,34 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.appendChild(lightbox);
 
-    const close = () => {
+    const closeButton = lightbox.querySelector(".beer-lightbox-close");
+
+    const closeLightbox = () => {
       lightbox.classList.remove("is-open");
       lightbox.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
       label.focus();
     };
 
-    const open = () => {
+    const openLightbox = () => {
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
     };
 
-    label.addEventListener("click", open);
+    label.addEventListener("click", openLightbox);
     label.addEventListener("keydown", e => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        open();
+        openLightbox();
       }
     });
-    close.addEventListener("click", close);
+    closeButton.addEventListener("click", closeLightbox);
     lightbox.addEventListener("click", e => {
-      if (e.target === lightbox) close();
+      if (e.target === lightbox) closeLightbox();
     });
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape" && lightbox.classList.contains("is-open")) close();
+      if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
     });
   }
 

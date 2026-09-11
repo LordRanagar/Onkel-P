@@ -37,6 +37,9 @@
         <a href="#gyldenboerste" class="beer-tab" data-beer="gyldenboerste" role="tab" aria-selected="false">
           <span>Gyldenbørste</span><span>›</span>
         </a>
+        <a href="#noatun" class="beer-tab" data-beer="noatun" role="tab" aria-selected="false">
+          <span>Noatun</span><span>›</span>
+        </a>
       </div>
     </div>
 
@@ -88,6 +91,30 @@
           <a href="assets/Gyldenboerste-opskrift.pdf" target="_blank" rel="noopener">Se bryggeopskriften (PDF) →</a>
         </div>
       </section>
+
+      <section class="panel beer-detail" id="noatun" data-beer-panel="noatun" hidden>
+        <h2>Noatun</h2>
+        <p class="beer-style">Imperial IPA</p>
+        <div class="beer-layout">
+          <div class="beer-label-wrap">
+            <img class="beer-label" src="assets/noatun.png" alt="Etiket for Noatun, Imperial IPA fra Nordbryg">
+          </div>
+          <div class="beer-facts">
+            <p><strong>Type:</strong> Imperial IPA</p>
+            <p><strong>Alkohol (ABV):</strong> 8,3 %</p>
+            <p><strong>IBU:</strong> 103</p>
+            <p><strong>Humle:</strong> Magnum og Perle</p>
+            <p><strong>Volumen:</strong> 20 liter</p>
+            <p><strong>Farve:</strong> 43 EBC (Brown)</p>
+            <hr>
+            <p><strong>Beskrivelse:</strong> Noatun er en Imperial IPA på 8,3 % ABV og 103 IBU, brygget med Magnum og Perle.</p>
+          </div>
+        </div>
+        <div class="recipe-card recipe-link-card">
+          <strong>Opskrift</strong>
+          <a href="assets/Noatun.pdf" target="_blank" rel="noopener">Se bryggeopskriften (PDF) →</a>
+        </div>
+      </section>
     </div>
   </section>
 
@@ -130,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const hash = location.hash.substring(1);
-  showBeer(hash === "gyldenboerste" ? "gyldenboerste" : "mjoelner");
+  showBeer(["mjoelner", "gyldenboerste", "noatun"].includes(hash) ? hash : "mjoelner");
 });
 </script>
 

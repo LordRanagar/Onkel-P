@@ -98,6 +98,41 @@
 </main>
 </div>
 <footer class="footer"><span>© 2026 Onkel P</span><span class="footer-links"><a href="https://www.facebook.com/profile.php?id=61593776207844" target="_blank" rel="noopener" aria-label="Onkel P på Facebook">f</a><a href="mailto:onkel-p@kofoed-lauritsen.dk" aria-label="Send mail til Onkel P">✉</a></span></footer>
-<script src="script.js"></script>
+<script src="script.js?v=2.7.15"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".beer-tab[data-beer]");
+  const panels = document.querySelectorAll(".beer-detail[data-beer-panel]");
+  if (!tabs.length || !panels.length) return;
+
+  function showBeer(name) {
+    tabs.forEach(function (tab) {
+      const selected = tab.getAttribute("data-beer") === name;
+      tab.classList.toggle("selected", selected);
+      tab.setAttribute("aria-selected", selected ? "true" : "false");
+    });
+    panels.forEach(function (panel) {
+      const active = panel.getAttribute("data-beer-panel") === name;
+      panel.hidden = !active;
+      panel.classList.toggle("active", active);
+    });
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function (event) {
+      event.preventDefault();
+      showBeer(tab.getAttribute("data-beer"));
+      if (history.replaceState) {
+        history.replaceState(null, "", "#" + tab.getAttribute("data-beer"));
+      }
+    });
+  });
+
+  const hash = location.hash.substring(1);
+  showBeer(hash === "gyldenboerste" ? "gyldenboerste" : "mjoelner");
+});
+</script>
+
 </body>
 </html>

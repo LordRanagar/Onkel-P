@@ -52,21 +52,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => moveMarker(active, false));
   window.addEventListener("scroll", () => moveMarker(active, false), { passive: true });
 
-  // Nordbryg beer selector.
-  const beerLinks = document.querySelectorAll("[data-beer]");
-  const beerTitle = document.querySelector("[data-beer-title]");
-
-  if (beerLinks.length && beerTitle) {
-    beerLinks.forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        beerLinks.forEach(x => x.classList.remove("selected"));
-        link.classList.add("selected");
-        const n = link.dataset.beer;
-        beerTitle.textContent = `Øl nr. ${n}`;
-        history.replaceState(null, "", `#ol-${n}`);
-      });
-    });
-  }
-
 });

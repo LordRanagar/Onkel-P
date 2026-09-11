@@ -158,7 +158,7 @@ p{max-width:78ch;margin-top:0;margin-bottom:14px}
 
 /* TailWag 2.3 */
 .status-list { margin: 0; }
-.status-list div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 16px; padding: 7px 0; border-bottom: 1px solid rgba(184,137,61,.22); }
+.status-list div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px solid rgba(184,137,61,.22); }
 .status-list div:last-child { border-bottom: 0; }
 .status-list dt { font-weight: 700; }
 .status-list dd { margin: 0; }
@@ -168,73 +168,16 @@ p{max-width:78ch;margin-top:0;margin-bottom:14px}
 .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 @media (max-width: 900px) { .two-column { grid-template-columns: 1fr; } }
 
-/* Onkel P 2.7.3 - small personal homepage note */
-.home-note{
-  margin-top:24px;
-  border-top:1px solid var(--line-soft);
-  padding-top:18px;
-}
-.home-note-inner{
-  max-width:900px;
-}
-.home-note h2{
-  margin:0 0 8px;
-}
-.home-note p{
-  color:var(--muted);
-  margin-bottom:0;
-}
-
-/* Onkel P 2.7.6 - Nordbryg selection label */
-.beer-selection-label{
-  margin:0 0 10px;
-  color:var(--muted);
-  font-size:.92rem;
-}
-.beer-selection-label strong{
-  color:var(--cream);
-}
-
-/* Onkel P 2.7.7 - Om Onkel P */
-.personal-lead{
-  border:1px solid var(--line-soft);
-  background:rgba(18,15,12,.72);
-  padding:13px 17px;
-  display:inline-block;
-  margin-bottom:20px;
-}
-.about-photo-column .photo{
-  max-height:520px;
-}
-.photo-caption{
-  color:var(--muted);
-  font-size:.9rem;
-  margin:7px 0 18px;
-  text-align:center;
-}
-.about-text-column .quote{
-  margin-bottom:0;
-}
-.my-things-grid{
-  margin-top:18px;
-}
-.card-link{
-  display:block;
-  color:var(--muted);
-  text-decoration:none;
-  transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease;
-}
-.card-link:hover{
-  color:var(--cream);
-  background:#211a14;
-  border-color:var(--line);
-  transform:translateY(-1px);
-}
-.card-link strong{
-  display:block;
-  color:var(--cream);
-  margin-bottom:7px;
-}
-@media(max-width:900px){
-  .about-photo-column{order:-1}
-}
+/* Nordbryg beer showcase */
+.beer-showcase{display:grid;grid-template-columns:minmax(220px,.58fr) minmax(0,1.42fr);gap:24px;align-items:start;margin-top:28px}
+.beer-showcase-copy h2{margin-top:0}
+.single-beer-list{margin-top:20px}
+.beer-list a{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid var(--line-soft);border-bottom:0;background:#11100e;color:var(--cream);text-decoration:none;transition:background .18s ease,padding-left .18s ease}
+.beer-list a:last-child{border-bottom:1px solid var(--line-soft)}
+.beer-list a:hover,.beer-list a.selected{background:linear-gradient(90deg,#2a2017,#17120f);padding-left:20px}
+.beer-style{margin-top:-8px;color:#d8bf98;font-style:italic}
+.beer-label-wrap{display:flex;align-items:center;justify-content:center;min-height:520px;border:1px solid var(--line-soft);background:#11100e;padding:18px}
+.beer-label-wrap img{display:block;width:min(100%,360px);height:auto;filter:drop-shadow(0 14px 18px rgba(0,0,0,.55))}
+.recipe-link-card a{color:#d8bf98;text-decoration:none}
+.recipe-link-card a:hover{text-decoration:underline;color:#e4c38b}
+@media(max-width:900px){.beer-showcase{grid-template-columns:1fr}.beer-label-wrap{min-height:0}.beer-label-wrap img{width:min(100%,420px)}}

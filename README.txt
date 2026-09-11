@@ -1,35 +1,10 @@
-ONKEL P 2.7.7
+ONKEL P 2.7.9
 
-Mobilversionen er nu tilpasset den godkendte Onkel P-struktur.
+Nordbryg er nu opdateret med den første rigtige øl: Mjølner.
 
-På mindre skærme:
-- Venstremenuen bliver til en enkel lodret menu over indholdet.
-- Den samme navigation og OP-markør bevares.
-- Indholdets eksisterende responsive kolonner bevares.
-- Ingen ny hamburger-menu er indført.
+- Mjølner vises med færdig Nordbryg-etiket.
+- Fakta er baseret på den tilhørende BeerCalc-opskrift.
+- Den originale bryggeopskrift er tilgængelig som PDF fra Mjølner-siden.
+- De øvrige øl er ikke vist endnu. De kommer først på siden, når de har fået navn og færdig etiket.
 
-Øvrigt indhold og godkendt design fra 2.6 er bevaret.
-
-
-Version: 2.7.2
-Favicon, SEO metadata, canonical URLs and social sharing metadata added.
-
-
-2.7.3:
-Forsiden har fået en lille personlig tekstsektion, uden ændringer af den godkendte grundstruktur eller navigation.
-
-
-2.7.4:
-Dungeons of Darkmore-siden har fået en kort, visuel sektion om projektets tre centrale mål: udforskning, party-spil og den klassiske dungeon crawler-stemning.
-
-
-2.7.5:
-TailWag-siden har fået en kort sektion om, hvad projektet skal gøre nemmere: overblik, hundehverdag og flere hunde/personer.
-
-
-2.7.6:
-Nordbryg viser nu tydeligt, hvilken øl der er valgt, mens den eksisterende øl-vælger bevares. Ingen nye øldata er opfundet eller tilføjet.
-
-
-2.7.7:
-Om Onkel P er gjort mere personlig og visuel. Pede og Bobby står først i profilsiden, den godkendte personlige introduktion er fremhævet, og Mine ting viser tre direkte links til Darkmore, TailWag og Nordbryg. Eksisterende godkendt tekst er bevaret.
+Øvrigt godkendt Onkel P-design og navigation er bevaret.
